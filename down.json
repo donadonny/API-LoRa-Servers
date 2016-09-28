@@ -1,0 +1,74 @@
+{
+    "token": 1029384756123456,
+    "gateways": {
+        "AAAAAAAAAAAAAAAA": {
+            "region": 4,
+            "altitude": 22,
+            "latitude": 51.442550,
+            "longitude": 5.472264,
+            "allowGpsToSetPosition": 1,
+            "maxTxPower_dBm": 14       
+        },
+        "BBBBBBBBBBBBBBBB": {
+            "region": 4
+        }
+    },
+    "motes": {
+        "1111111111111111": {
+            "networkAddress": "ABCDEF01",
+            "appeui": "ABCDEF1234567890",
+            "networkSessionKey": "1029384756AFBECD5647382910DACFEB",
+            "applicationSessionKey": "1FBECD56473829100192837465FAEBDC",
+            "classC": 0
+        },
+        "2222222222222222": {
+            "networkAddress": "ABCDEF02",
+            "appeui": "ABCDEF1234567890",
+            "networkSessionKey": "1029384756AFBECD5647382910DACFEB",
+            "applicationSessionKey": "2FBECD56473829100192837465FAEBDC",
+            "classC": 0
+        },
+        "3333333333333333": {
+            "networkAddress": "ABCDEF03",
+            "appeui": "1234567890ABCDEF",
+            "networkSessionKey": "1029384756AFBECD5647382910DACFEB",
+            "applicationSessionKey": "3FBECD56473829100192837465FAEBDC",
+            "classC": 0
+        }
+    },
+    "applications": {
+        "ABCDEF1234567890": {
+            "name": "FirstApp",
+            "owner": "Bob"
+        },
+        "1234567890ABCDEF": {
+            "name": "SecondApp",
+            "owner": "Mike"
+        }
+    },
+    "reports": {
+        "Last_data_received": {
+            "sql": "SELECT `time`, HEX(`eui`), HEX(`appeui`), `data` FROM motes AS m, appdata AS a WHERE a.id = m.lastRxFrame ORDER BY `appEui`",
+            "iterations": 20,
+            "period": 1
+        },
+    },
+    "frames": {
+        "1111111111111111": {
+            "data": "aa bb cc dd ee ff",
+            "port": 10,
+            "unconf": 0
+        },
+        "2222222222222222": {
+            "data": "11 22 33 44 55 66",
+            "port": 8,
+            "unconf": 0
+        }
+    },
+    "DEL": {
+        "gateways": ["AAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBB"],
+        "motes": ["1111111111111111", "2222222222222222", "3333333333333333"],
+        "applications": ["ABCDEF1234567890", "1234567890ABCDEF"],
+        "reports": ["Last_data_received"]
+    }
+}

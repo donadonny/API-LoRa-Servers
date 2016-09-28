@@ -1,0 +1,19 @@
+{
+  "awsCredentials": {
+    "access_key": "",
+    "secret_key": "",
+    "token": ""
+  },
+  "mysql_credentials": {
+    "hostname": "",
+    "username": "",
+    "password": ""
+  },
+  "post_url": "",
+  "get_url": "",
+  "ipns": "127.0.0.1",
+  "ipas": "127.0.0.1:4000",
+  "ipcs": "127.0.0.1:5000",
+  "ipnc": "127.0.0.1:6000",
+  "software_version": 1.0
+}
